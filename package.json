@@ -30,5 +30,8 @@
   },
   "nbbpm": {
     "compatibility": "^1.16.x"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
