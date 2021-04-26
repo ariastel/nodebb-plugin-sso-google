@@ -10,7 +10,7 @@ define('sso-google/login', function () {
 	Login.init = function () {
 		var replaceEl = $('.alt-logins .google a i');
 		var replacement = document.createElement('img');
-		replacement.src = config.relative_path + '/plugins/nodebb-plugin-sso-google/images/btn_google_signin_' + config['sso-google'].style + '_normal_web.png';
+		replacement.src = config.relative_path + '/plugins/@ariastel/nodebb-plugin-sso-google/images/button_google_logo.svg';
 		replaceEl.replaceWith(replacement);
 	}
 

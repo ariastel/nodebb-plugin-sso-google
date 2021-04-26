@@ -15,8 +15,15 @@
 		'name': "Google",
 		'admin': {
 			'route': '/plugins/sso-google',
-			'icon': 'fa-google-plus-square'
-		}
+			'icon': 'fa-google'
+		},
+
+		displayName: 'Google',
+		button: {
+			borderColor: '#EB4141',
+			backgroundColor: '#FFF',
+			textColor: '#000',
+		},
 	});
 
 	var Google = {
@@ -72,14 +79,6 @@
 		});
 	}
 
-	Google.exposeSettings = function (data, callback) {
-		data['sso-google'] = {
-			style: Google.settings.style || 'light',
-		};
-
-		callback(null, data);
-	};
-
 	Google.getStrategy = function (strategies, callback) {
 		if (Google.settings['id'] && Google.settings['secret']) {
 			passport.use(new passportGoogle({
@@ -113,7 +112,10 @@
 				callbackURL: '/auth/google/callback',
 				icon: constants.admin.icon,
 				scope: 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
-				prompt: 'select_account'
+				prompt: 'select_account',
+
+				displayName: constants.displayName,
+				...constants.button,
 			});
 		}
 
