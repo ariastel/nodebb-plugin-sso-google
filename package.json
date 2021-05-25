@@ -1,6 +1,6 @@
 {
   "name": "@ariastel/nodebb-plugin-sso-google",
-  "version": "1.0.0",
+  "version": "2.0.0-alpha.1",
   "description": "NodeBB Google SSO",
   "main": "library.js",
   "repository": "git://github.com/ariastel/nodebb-plugin-sso-google.git",
@@ -29,7 +29,7 @@
     "passport-google-oauth20": "^1.0.0"
   },
   "nbbpm": {
-    "compatibility": "^1.16.x"
+    "compatibility": "^1.16.x || ^1.17.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
